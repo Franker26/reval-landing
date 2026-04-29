@@ -7,19 +7,19 @@ const metrics = [
     value: '80%',
     label: 'Menos tiempo por tasación',
     sub: 'Lo que tardaba horas tarda minutos.',
-    color: 'from-blue-400 to-cyan-400',
+    color: 'from-blue-600 to-cyan-500',
   },
   {
     value: '+120',
     label: 'Tasaciones generadas',
     sub: 'Equipos inmobiliarios ya usan Reval.',
-    color: 'from-violet-400 to-purple-400',
+    color: 'from-violet-600 to-purple-500',
   },
   {
     value: '3×',
     label: 'Más captaciones por agente',
     sub: 'En el primer trimestre de uso.',
-    color: 'from-blue-400 to-violet-400',
+    color: 'from-blue-600 to-violet-500',
   },
 ]
 
@@ -55,7 +55,7 @@ const testimonials = [
 
 export default function SocialProof() {
   return (
-    <section className="py-28 px-6 bg-[#0B0B0C]">
+    <section className="py-28 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,8 +64,8 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-4">Resultados</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <p className="text-sm font-semibold text-blue-600 tracking-widest uppercase mb-4">Resultados</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Los números hablan
           </h2>
         </motion.div>
@@ -85,13 +85,13 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="rounded-2xl border border-white/[0.07] bg-[#111115] p-8 text-center"
+              className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm"
             >
               <p className={`text-6xl font-extrabold tracking-tight bg-gradient-to-r ${color} bg-clip-text text-transparent mb-3`}>
                 {value}
               </p>
-              <p className="text-white font-semibold mb-1">{label}</p>
-              <p className="text-zinc-500 text-sm">{sub}</p>
+              <p className="text-gray-900 font-semibold mb-1">{label}</p>
+              <p className="text-gray-400 text-sm">{sub}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -106,9 +106,8 @@ export default function SocialProof() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="rounded-2xl border border-white/[0.07] bg-[#111115] p-6 flex flex-col gap-5"
+              className="rounded-2xl border border-gray-200 bg-white p-6 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Stars */}
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <svg key={j} className="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -117,7 +116,7 @@ export default function SocialProof() {
                 ))}
               </div>
 
-              <blockquote className="text-zinc-300 text-sm leading-relaxed flex-1">
+              <blockquote className="text-gray-600 text-sm leading-relaxed flex-1">
                 &ldquo;{quote}&rdquo;
               </blockquote>
 
@@ -126,8 +125,8 @@ export default function SocialProof() {
                   {initials}
                 </div>
                 <div>
-                  <p className="text-zinc-200 text-sm font-semibold">{name}</p>
-                  <p className="text-zinc-500 text-xs">{role} · {agency}</p>
+                  <p className="text-gray-800 text-sm font-semibold">{name}</p>
+                  <p className="text-gray-400 text-xs">{role} · {agency}</p>
                 </div>
               </div>
             </motion.div>

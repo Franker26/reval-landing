@@ -64,7 +64,7 @@ const BarChart = () => {
 
 export default function ProductPreview() {
   return (
-    <section id="preview" className="py-28 px-6 bg-[#0B0B0C]">
+    <section id="preview" className="py-28 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,12 +73,12 @@ export default function ProductPreview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-4">La plataforma</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+          <p className="text-sm font-semibold text-blue-600 tracking-widest uppercase mb-4">La plataforma</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
             Así trabaja Reval
           </h2>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            Datos reales, análisis automatizado, reporte profesional. Todo desde un solo lugar.
+          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+            Vos cargás los datos, Reval hace el análisis y confecciona el reporte. Todo desde un solo lugar.
           </p>
         </motion.div>
 
@@ -88,7 +88,7 @@ export default function ProductPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-2xl border border-white/[0.08] overflow-hidden shadow-2xl shadow-black/60"
+          className="rounded-2xl border border-gray-200 overflow-hidden shadow-2xl shadow-gray-900/10"
           style={{ background: '#111115' }}
         >
           {/* Browser chrome */}
@@ -252,19 +252,13 @@ export default function ProductPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          className="flex items-center justify-center mt-10"
         >
           <a
             href="#demo"
-            className="px-7 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold text-sm hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg shadow-blue-900/25"
+            className="px-7 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold text-sm hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg shadow-blue-500/20"
           >
             Solicitar demo
-          </a>
-          <a
-            href="#simulador"
-            className="px-7 py-3 rounded-xl border border-white/10 bg-white/[0.04] text-zinc-300 font-medium text-sm hover:bg-white/[0.08] transition-all"
-          >
-            Ver ejemplo de reporte →
           </a>
         </motion.div>
       </div>
