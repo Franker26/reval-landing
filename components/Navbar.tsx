@@ -39,14 +39,14 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/60 backdrop-blur-xl border-b border-white/[0.06]'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5 select-none">
           <RevalLogo />
-          <span className="text-white font-bold tracking-[0.2em] text-[13px]">REVAL</span>
+          <span className="text-gray-900 font-bold tracking-[0.2em] text-[13px]">REVAL</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -54,7 +54,7 @@ export default function Navbar() {
             <a
               key={label}
               href={href}
-              className="text-zinc-400 hover:text-zinc-100 text-sm transition-colors duration-150"
+              className="text-gray-500 hover:text-gray-900 text-sm transition-colors duration-150"
             >
               {label}
             </a>
@@ -64,12 +64,12 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#demo"
-            className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-violet-900/20"
+            className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-md shadow-blue-500/20"
           >
             Solicitar demo
           </a>
           <button
-            className="md:hidden text-zinc-400 p-1"
+            className="md:hidden text-gray-500 p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menú"
           >
@@ -88,14 +88,14 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-          className="md:hidden bg-black/80 backdrop-blur-xl border-t border-white/[0.06] px-6 pb-4"
+          className="md:hidden bg-white border-t border-gray-100 px-6 pb-4 shadow-lg"
         >
           {navLinks.map(({ label, href }) => (
             <a
               key={label}
               href={href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-zinc-300 text-sm border-b border-white/[0.04] last:border-0"
+              className="block py-3 text-gray-600 text-sm border-b border-gray-100 last:border-0"
             >
               {label}
             </a>

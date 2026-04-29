@@ -50,7 +50,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section id="producto" className="py-28 px-6 bg-[#0B0B0C]">
+    <section id="producto" className="py-28 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,11 +59,11 @@ export default function Problem() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-4">El problema</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <p className="text-sm font-semibold text-blue-600 tracking-widest uppercase mb-4">El problema</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             El proceso actual te está
             <br />
-            <span className="text-zinc-400">costando captaciones</span>
+            <span className="text-gray-400">costando captaciones</span>
           </h2>
         </motion.div>
 
@@ -79,20 +79,19 @@ export default function Problem() {
               key={tag}
               variants={item}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="relative rounded-2xl border border-white/[0.07] bg-[#111115] p-7 overflow-hidden group"
+              className="relative rounded-2xl border border-gray-200 bg-white p-7 overflow-hidden group shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Subtle corner glow on hover */}
-              <div className="absolute top-0 left-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-all duration-500 -translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute top-0 left-0 w-32 h-32 bg-red-50 rounded-full blur-3xl group-hover:bg-red-100 transition-all duration-500 -translate-x-1/2 -translate-y-1/2" />
 
               <div className="relative">
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-500/10 text-red-400 mb-5">
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-50 text-red-500 mb-5">
                   {icon}
                 </div>
-                <span className="block text-xs font-semibold text-red-400/70 tracking-widest uppercase mb-2">
+                <span className="block text-xs font-semibold text-red-400 tracking-widest uppercase mb-2">
                   {tag}
                 </span>
-                <h3 className="text-lg font-semibold text-white mb-3 leading-snug">{title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{body}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-snug">{title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
               </div>
             </motion.div>
           ))}
